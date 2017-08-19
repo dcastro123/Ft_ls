@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcastro- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcastro- <dcastro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/05 20:36:35 by dcastro-          #+#    #+#             */
-/*   Updated: 2017/01/25 16:14:30 by dcastro-         ###   ########.fr       */
+/*   Updated: 2017/08/02 19:32:42 by dcastro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+char				*ft_itoa_base(int value, int base);
+char				*ft_ultoa_base(unsigned long value, int base);
+char				*ft_uitoa_capbase(int value, int base);
+char				*ft_uitoa_base(int value, int base);
+char				*ft_uitoa(unsigned int n);
 #endif

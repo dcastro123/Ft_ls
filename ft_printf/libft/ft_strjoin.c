@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastro- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 16:46:27 by dcastro-          #+#    #+#             */
-/*   Updated: 2017/01/25 15:35:55 by dcastro-         ###   ########.fr       */
+/*   Created: 2017/01/10 13:48:21 by dcastro-          #+#    #+#             */
+/*   Updated: 2017/02/10 23:47:52 by dcastro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	j;
-	char	**temp;
+	char	*temp;
+	int		len;
 
-	if (!s || !c)
+	if (!s1 || !s2)
 		return (NULL);
-	if (!(temp = (char **)malloc(sizeof(char*) * (ft_wdcount(s, c) + 1))))
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!(temp = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	i = 0;
-	while (*s)
-	{
-		if (*s != c)
-		{
-			j = 0;
-			if (!(temp[i] = (char*)malloc(sizeof(char) * (ft_wdlen(s, c) + 1))))
-				return (NULL);
-			while (ft_wdlen(s, c) > 0)
-				temp[i][j++] = *s++;
-			temp[i++][j] = '\0';
-		}
-		else
-			s++;
-	}
-	temp[i] = 0;
+	ft_strcpy(temp, (char*)s1);
+	ft_strcat(temp, s2);
 	return (temp);
 }

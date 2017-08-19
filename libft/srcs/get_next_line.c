@@ -6,11 +6,11 @@
 /*   By: dcastro- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/04 16:42:41 by dcastro-          #+#    #+#             */
-/*   Updated: 2017/04/12 22:46:54 by dcastro-         ###   ########.fr       */
+/*   Updated: 2017/07/12 14:56:27 by dcastro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 int		send_help(char **buf_keep, char **line)
 {

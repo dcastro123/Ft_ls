@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ls.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcastro- <dcastro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/14 20:59:18 by dcastro-          #+#    #+#             */
-/*   Updated: 2017/08/19 16:10:35 by dcastro-         ###   ########.fr       */
+/*   Created: 2017/01/05 16:54:57 by dcastro-          #+#    #+#             */
+/*   Updated: 2017/07/27 15:04:53 by dcastro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LS_H
-# define FT_LS_H
+#include "../includes/libft.h"
 
-#include <stdio.h>
-#include "libft.h"
-#include "ft_printf.h"
-#include <dirent.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <time.h>
-#include <sys/stat.h>
-#include <pwd.h>
-#include <uuid/uuid.h>
-#include <sys/types.h>
-#include <grp.h>
-#include <sys/xattr.h>
-
-typedef struct 		s_env
+char			*ft_strdup(const char *s1)
 {
+	size_t	i;
+	char	*temp;
 
-
-
-
-
-}					t_env;
-
-typedef struct 		s_data
-{
-
-
-
-
-
-
-}					t_data;
-
-
+	if (!s1)
+		return (NULL);
+	i = ft_strlen(s1);
+	if (!(temp = ft_strnew(i)))
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		temp[i] = s1[i];
+		i++;
+	}
+	temp[i] = '\0';
+	return (temp);
+}
