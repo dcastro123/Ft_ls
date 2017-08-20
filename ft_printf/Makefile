@@ -6,7 +6,7 @@
 #    By: dcastro- <dcastro-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 17:55:35 by dcastro-          #+#    #+#              #
-#    Updated: 2017/08/02 19:44:15 by dcastro-         ###   ########.fr        #
+#    Updated: 2017/08/19 17:01:16 by dcastro-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,6 @@ OBJS = 	ft_printf.o start_printf.o handle_str.o handle_int.o handle_more_int.o\
 
 CMPSRCS = $(SRC) $(HANDLER) $(HELPER) $(LIBFT)
 INCL = -I includes/libft.h -I includes/ft_printf.h
-
-ODIR = objs
 
 .PHONY: all clean fclean re
 .SUFFIXES: .c .o
