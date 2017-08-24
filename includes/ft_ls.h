@@ -6,7 +6,7 @@
 /*   By: dcastro- <dcastro-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/14 20:59:18 by dcastro-          #+#    #+#             */
-/*   Updated: 2017/08/19 16:10:35 by dcastro-         ###   ########.fr       */
+/*   Updated: 2017/08/24 16:43:34 by dcastro-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,19 @@
 #include <grp.h>
 #include <sys/xattr.h>
 
-typedef struct 		s_env
-{
-
-
-
-
-
-}					t_env;
+typedef	struct dirent t_stat;
+typedef	struct stat   t_dr;
 
 typedef struct 		s_data
 {
-
-
-
-
+	char	flag;
+	char	*name;
+	struct s_env	*next;
+	int			len;
+	t_stat	stat;
 
 
 }					t_data;
 
 
+#endif
